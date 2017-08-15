@@ -25,11 +25,11 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import com.qwertyko.akijogja.R;
-import com.qwertyko.akijogja.fragment.HomeFragmentx;
+import com.qwertyko.akijogja.fragment.HomeFragment;
 import com.qwertyko.akijogja.other.CircleTransform;
 
 public class MainActivity extends AppCompatActivity
-        implements HomeFragmentx.OnFragmentInteractionListener,
+        implements HomeFragment.OnFragmentInteractionListener,
         NavigationView.OnNavigationItemSelectedListener {
 
     private NavigationView navigationView;
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity
         switch (navItemIndex) {
             case 0:
                 // home
-                HomeFragmentx homeFragment = new HomeFragmentx();
+                HomeFragment homeFragment = new HomeFragment();
                 return homeFragment;
 //            case 1:
 //                // photos
@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity
 //                SettingsFragment settingsFragment = new SettingsFragment();
 //                return settingsFragment;
             default:
-                return new HomeFragmentx();
+                return new HomeFragment();
         }
     }
 
@@ -349,7 +349,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
+        // automatically handle clicks on the HomeFragment/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
